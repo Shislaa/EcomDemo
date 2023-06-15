@@ -22,4 +22,9 @@ public class StudentController {
     public List<Student> getStudents() {
         return studentService.getStudents();
     }
+
+//    @PostMapping("/addStudent")
+//    public void addStudent(@RequestParam()) {
+//
+//    }
 }
