@@ -1,12 +1,17 @@
-package com.nhmi.ecom.Student;
+package com.nhmi.ecom.controller;
 
+import com.nhmi.ecom.student.Student;
+import com.nhmi.ecom.student.StudentService;
+import io.swagger.annotations.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
 @RestController
-@RequestMapping(path="api/v1/student")
+@RequestMapping(path="v2/api/student")
+@Api(value = "Operations related to students", tags = {"Students"})
+@SwaggerDefinition(tags = {@Tag(name = "Student Apis", description = "Operations related to student") })
 public class StudentController {
 
 
@@ -18,6 +23,12 @@ public class StudentController {
     }
 
 
+    @ApiOperation(
+            value="Retrieve all student",
+            notes = "Used to fetch all students from the database")
+    @ApiResponses(value = {
+            @ApiResponse(code = 200, message = "Success")
+    })
     @GetMapping("/getStudents")
     public List<Student> getStudents() {
         return studentService.getStudents();

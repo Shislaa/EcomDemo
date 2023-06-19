@@ -11,3 +11,19 @@ spring:
                 dialect: org.hibernate.dialect.PostgreSQLDialect
                 format_sql: true
         show-sql: true
+    mvc:
+        pathmatch:
+          matching-strategy: ant_path_matcher
+app:
+    name: Ecom Demo
+    api:
+        title: Ecom Demo Apis
+        version: alpha
+        description: Apis testing ground
+        base-package: com.nhmi.ecom
+        contact-name: apisupportgroup
+        contact-email: apisupportgroup@abc.abc
+        swagger:
+            enable: true
+server:
+    port: 8080

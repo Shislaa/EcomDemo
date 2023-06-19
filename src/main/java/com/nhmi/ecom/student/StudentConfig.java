@@ -1,4 +1,4 @@
-package com.nhmi.ecom.Student;
+package com.nhmi.ecom.student;
 
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.context.annotation.Bean;

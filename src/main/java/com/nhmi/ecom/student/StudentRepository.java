@@ -1,4 +1,4 @@
-package com.nhmi.ecom.Student;
+package com.nhmi.ecom.student;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
